@@ -34,7 +34,7 @@ const Navbar = (props) => {
     }, []);
 
     return (
-        <div style={{backgroundColor: `${color}`}} className='fixed w-full z-10 easy-in-out duration-300 bg-red-400'>
+        <div style={{backgroundColor: `${color}`}} className='fixed w-full z-10 easy-in-out duration-300 '>
             <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
                 <Link href='/'>
                     <Image
@@ -65,7 +65,7 @@ const Navbar = (props) => {
 
                 <div
                     className={nav ? 'md:hidden absolute top-0 left-0 bottom-0 right-0 flex items-center flex-col w-full h-screen bg-black text-center easy-in duration-300'
-                        : 'md:hidden absolute top-0 left-[-100%] bottom-0 right-0 flex items-center w-full h-screen bg-black text-center easy-in duration-300'}>
+                        : 'md:hidden absolute top-0 left-[-100%] bottom-0 right-0 flex items-center flex-col w-full h-screen bg-black text-center easy-in duration-300'}>
                     <div className='w-[100%] flex'>
                         <Link href='/' className='m-5'>
                             <Image
@@ -89,14 +89,17 @@ const Navbar = (props) => {
                     <ul className='mt-7'>
                         {
                             links.map(link => (
-                                <li key={link.name} className='text-3xl p-4 hover:text-gray-500'>
+                                <li key={link.name}
+                                    onClick={() => setNav(false)}
+                                    className='text-3xl p-4 hover:text-gray-500'>
                                     <Link href={link.href}>{link.name}</Link>
                                 </li>
                             ))
                         }
                     </ul>
                     <ul className='m-8'>
-                        <li className='px-12 py-4 bg-[#193366] rounded-[50px] hover:bg-[#2d5bb9] ease-in-out duration-300'>
+                        <li className='px-12 py-4 bg-[#193366] rounded-[50px] hover:bg-[#2d5bb9] ease-in-out duration-300'
+                            onClick={() => setNav(false)}>
                             <Link href="/#kontakt">
                                 <p className='text-xl'>Kontakt</p>
                             </Link>
