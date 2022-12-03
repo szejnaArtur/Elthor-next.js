@@ -1,6 +1,6 @@
 import {Fragment} from "react";
-import Hero from "../components/hero/Hero";
-import About from "../components/about/About";
+import Hero from "../components/hero/hero";
+import About from "../components/about/about";
 
 function HomePage() {
     return (
