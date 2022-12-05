@@ -11,7 +11,7 @@ const MainNavigation = (props) => {
 
     const [nav, setNav] = useState(false);
     const [color, setColor] = useState('transparent');
-    const [textColor, setTextColor] = useState('white');
+    const [textColor, setTextColor] = useState('#ffffff');
 
     const {links} = props;
 
