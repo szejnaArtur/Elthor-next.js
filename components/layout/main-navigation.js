@@ -57,7 +57,7 @@ const MainNavigation = (props) => {
                 <ul className='hidden md:flex' style={{color: `${textColor}`}}>
                     {
                         links.map(link => (
-                            <li className='p-4 ease-in duration-300 hover:text-[#193366]' key={link.name}>
+                            <li className='p-4 ease-in duration-300 text-xl hover:text-[#193366]' key={link.name}>
                                 <Link href={link.href} scroll={true}>{link.name}</Link>
                             </li>
                         ))

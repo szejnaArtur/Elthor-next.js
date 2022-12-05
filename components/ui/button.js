@@ -21,7 +21,7 @@ const Button = props => {
                 className='w-full h-full bg-[#193366] ease-in duration-300 rounded-[30px] relative hover:w-[60px]'
             />
             <div className='absolute flex'>
-                <p className='relative font-bold text-[16px] top-[19px] right-11'>SPRAWDZ NASZĄ OFERTĘ</p>
+                <p className='relative font-bold text-[16px] top-[19px] right-11'>{props.name}</p>
                 <FaLongArrowAltRight
                     style={
                         isHovered ? {
